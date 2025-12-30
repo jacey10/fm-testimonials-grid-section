@@ -1,0 +1,268 @@
+/* barlow-semi-condensed-regular - latin */
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  src: url('assets/fonts/barlow-semi-condensed-v16-latin-regular.woff2') format('woff2'); 
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; 
+}
+
+/* barlow-semi-condensed-500 - latin */
+@font-face { 
+  font-family: 'Barlow Semi Condensed';
+  src: url('assets/fonts/barlow-semi-condensed-v16-latin-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* barlow-semi-condensed-600 - latin */
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  src: url('assets/fonts/barlow-semi-condensed-v16-latin-600.woff2') format('woff2'); 
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; 
+}
+
+/* == CSS RESET == */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul, ol {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+:root {
+
+  /* == Color Pallette == */
+
+  /* Primary Colors */
+  --clr-purple-50: hsl(260, 100%, 95%);
+  --clr-purple-300: hsl(264, 82%, 80%);
+  --clr-purple-500: hsl(263, 55%, 52%);
+
+  /* Neutral colors */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-dark-blue: hsl(219, 29%, 14%);
+  --clr-black: hsl(0, 0%, 7%);
+  --clr-grey-100: hsl(214, 17%, 92%);
+  --clr-grey-200: hsl(0, 0%, 81%);
+  --clr-grey-400: hsl(224, 10%, 45%);
+  --clr-grey-500: hsl(217, 19%, 35%);
+  
+  /* == Typography == */
+
+  /* Font family */
+  --ff-body: "Barlow Semi Condensed", sans-serif;
+
+  /* Font size */
+  --fs-body: 0.835rem;
+
+  /* Font weight */
+  --fw--normal: 400;
+  --fw-bold: 500;
+  --fw-bolder: 600;
+}
+
+body {
+  max-width: 100%;
+  background: var(--clr-grey-100);
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+}
+
+main {
+  width: 86%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem;
+}
+
+.cards {
+  padding: clamp(2rem, 2.5vw, 2.5rem);
+  border-radius: 0.6rem;
+}
+
+.main__author--profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  line-height: 0.7;
+}
+
+.author-name {
+  font-weight: var(--fw-bold);
+}
+
+.author-bio {
+  margin-block-start: -0.6rem;
+}
+
+img {
+  display: block;
+  border-radius: 50%;
+}
+
+.author-avatar {
+  max-width: 2rem;
+  height: 2rem;
+}
+
+.icon {
+  display: none;
+}
+
+h2 {
+ font-weight: var(--fw-bolder);
+ max-width: 100%;
+}
+
+blockquote {
+  margin-inline-start: 0;
+  width: 100%;
+}
+
+blockquote p {
+  font-weight: var(--fw-bold);
+}
+
+.cards {
+  width: 100%;
+  max-height: 100%;
+}
+
+#card-1 {
+  position: relative;
+  background: var(--clr-purple-500);
+  color: var(--clr-purple-50);
+}
+
+.purple {
+  color: var(--clr-purple-300);
+}
+
+#card-2 {
+  background: var(--clr-grey-400);
+  color: var(--clr-grey-200);
+}
+
+#card-3,  #card-5{
+  background: var(--clr-white);
+  border: 2px solid var(--clr-grey-100);
+  color: var(--clr-grey-500);
+}
+
+#card-3 p, #card-5 p {
+  color: var(--clr-grey-400);
+}
+
+
+#card-4 {
+  background: var(--clr-black);
+  color: var(--clr-grey-200);
+}
+
+
+@media screen and (min-width: 62.5rem) {
+  body {
+    display: grid;
+    place-items: center;
+    font-size: 0.64rem;
+  }
+
+  main {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .cards {
+    padding: 1.5rem;
+  }
+
+
+  #card-1 {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  #card-2 {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+
+  #card-3 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  #card-4 {
+    grid-area: 2 / 2 / 3 / 4;
+  }
+
+  #card-5 {
+    grid-area: 1 / 4 / 3 / 5;
+  }
+
+  .icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 3rem;
+    height: 5.5rem;
+    width: 5.5rem;
+    z-index: 0;
+  }
+
+  .card-heading {
+    position: relative;
+    z-index: 1;
+  }
+}
