@@ -116,7 +116,7 @@ body {
   font-family: var(--ff-body);
   font-size: var(--fs-body);
   display: flex;
-  flex-direction: center;
+  flex-direction: column;
   justify-content: center;
 }
 
