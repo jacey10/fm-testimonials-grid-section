@@ -133,6 +133,7 @@ main {
   border-radius: 0.6rem;
   width: 100%;
   max-height: 100%;
+  box-shadow: 4px 12px 18px var(--clr-grey-400);
 }
 
 .main__author--profile {
