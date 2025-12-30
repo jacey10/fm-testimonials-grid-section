@@ -227,6 +227,8 @@ blockquote p {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 1rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
   }
 
   .cards {
