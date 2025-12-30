@@ -211,7 +211,7 @@ blockquote p {
 }
 
 
-@media screen and (min-width: 62.5rem) {
+@media screen and (min-width: 48rem) {
   body {
     display: grid;
     place-items: center;
@@ -268,6 +268,11 @@ blockquote p {
     height: 5.5rem;
     width: 5.5rem;
     z-index: 0;
+  }
+
+  .author-bio {
+    position: relative;
+    z-index: 1;
   }
 
   .card-heading {
