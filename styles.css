@@ -52,12 +52,6 @@ ul, ol {
   list-style: none;
 }
 
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  line-height: 1.5;
-}
-
 /* Set shorter line heights on headings and interactive elements */
 h1, h2, h3, h4,
 button, input, label {
@@ -112,12 +106,15 @@ textarea, select {
 
 body {
   height: 100%;
+  min-height: 100vh;
   background: var(--clr-grey-100);
   font-family: var(--ff-body);
   font-size: var(--fs-body);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  line-height: 1.5;
 }
 
 main {
@@ -128,6 +125,23 @@ main {
   gap: 1rem;
   margin-block-start: 2rem;
   margin-block-end: 2rem;
+}
+
+h1 {
+  margin-block-end: 1.5rem;
+  color: var(--clr-grey-500);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .cards {
@@ -228,8 +242,8 @@ blockquote p {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, auto);
     gap: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 0;
+    margin-block-start: 1.5rem;
+    margin-block-end: 2rem;
   }
 
   .cards {
@@ -246,24 +260,25 @@ blockquote p {
   }
 
   #card-1 {
-    grid-area: 1 / 1 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 5;
   }
 
   #card-2 {
-    grid-area: 1 / 3 / 2 / 4;
+    grid-area: 2/ 1 / 3 / 3;
   }
 
   #card-3 {
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: 2 / 3 / 3 / 5;
   }
 
   #card-4 {
-    grid-area: 2 / 2 / 3 / 4;
+    grid-area: 3 / 1 / 4 / 5;
   }
 
   #card-5 {
-    grid-area: 1 / 4 / 3 / 5;
+    grid-area: 4 / 1 / 5 / 5;
   }
+  
 
   .icon {
     display: block;
@@ -295,23 +310,22 @@ blockquote p {
   }
 
   #card-1 {
-    grid-area: 1 / 1 / 2 / 5;
+    grid-area: 1 / 1 / 2 / 3;
   }
 
   #card-2 {
-    grid-area: 2/ 1 / 3 / 3;
+    grid-area: 1 / 3 / 2 / 4;
   }
 
   #card-3 {
-    grid-area: 2 / 3 / 3 / 5;
+    grid-area: 2 / 1 / 3 / 2;
   }
 
   #card-4 {
-    grid-area: 3 / 1 / 4 / 5;
+    grid-area: 2 / 2 / 3 / 4;
   }
 
   #card-5 {
-    grid-area: 4 / 1 / 5 / 5;
+    grid-area: 1 / 4 / 3 / 5;
   }
-
 }
