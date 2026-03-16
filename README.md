@@ -45,6 +45,7 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
 
 
 ## Author
-- Website - [James Chima](https://www.your-site.com)
+
+- Website - [Jacey Blog](https://www.jacey.hashnode.dev/)
 - Frontend Mentor - [@jacey10](https://www.frontendmentor.io/profile/jacey10)
-- Twitter - [@jacey_opara](https://x.com/jacey_opara)
+- Twitter - [@jacey_muna](https://x.com/jacey_muna)
